@@ -4,7 +4,7 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 class DioFactory {
   // if we put ///  3 slash this mean docment comment
   /// private constructor as I don't want to allow creating an instance of this class
-  /// this based on singlePattern 
+  /// this based on singlePattern
   DioFactory._();
 
   static Dio? dio;
@@ -25,7 +25,7 @@ class DioFactory {
     }
   }
 
-static void addDioInterceptor() {
+  static void addDioInterceptor() {
     dio?.interceptors.add(
       PrettyDioLogger(
         requestBody: true,
@@ -47,6 +47,4 @@ static void addDioInterceptor() {
   //     'Authorization': 'Bearer $token',
   //   };
   // }
-
-  
 }

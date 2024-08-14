@@ -2,9 +2,6 @@ import 'package:development/core/netwoking/api_constant.dart';
 import 'package:development/core/netwoking/api_error_model.dart';
 import 'package:dio/dio.dart';
 
-
-
-
 // TODO: wallahy I will refactor this .. Omar Ahmed
 enum DataSource {
   NO_CONTENT,

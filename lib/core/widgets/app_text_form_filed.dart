@@ -1,84 +1,62 @@
+import 'package:development/core/helpers/spacing.dart';
 import 'package:development/core/theming/colors.dart';
 import 'package:development/core/theming/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTextFormField extends StatelessWidget {
-  final EdgeInsetsGeometry? contentPadding;
-  final InputBorder? focusedBorder;
-  final InputBorder? enabledBorder;
-  final TextStyle? inputTextStyle;
-  final TextStyle? hintStyle;
   final String hintText;
-  final bool? isObscureText;
+  final bool? obstureText;
+  final EdgeInsetsGeometry? contextPadding;
+  final TextStyle? hintStyle;
   final Widget? suffixIcon;
+  final Widget? pefixIcon;
   final Color? backgroundColor;
-  final TextEditingController? controller;
-  final Function(String?) validator;
-  const AppTextFormField({
-    super.key,
-    this.contentPadding,
-    this.focusedBorder,
-    this.enabledBorder,
-    this.inputTextStyle,
-    this.hintStyle,
-    required this.hintText,
-    this.isObscureText,
-    this.suffixIcon,
-    this.backgroundColor,
-    this.controller,
-    required this.validator,
-  });
+  final OutlineInputBorder? enableBorder;
+  final OutlineInputBorder? focusBorder;
+
+  const AppTextFormField(
+      {super.key,
+      required this.hintText,
+      this.obstureText,
+      this.contextPadding,
+      this.hintStyle,
+      this.suffixIcon,
+      this.backgroundColor,
+      this.focusBorder,
+      this.enableBorder,
+      this.pefixIcon});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: controller,
-      decoration: InputDecoration(
-        isDense: true,
-        contentPadding: contentPadding ??
-            EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
-        focusedBorder: focusedBorder ??
-            OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: ColorsManager.mainBlue,
-                width: 1.3,
-              ),
-              borderRadius: BorderRadius.circular(16.0),
-            ),
-        enabledBorder: enabledBorder ??
-            OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: ColorsManager.lighterGray,
-                width: 1.3,
-              ),
-              borderRadius: BorderRadius.circular(16.0),
-            ),
-        errorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.red,
-            width: 1.3,
-          ),
-          borderRadius: BorderRadius.circular(16.0),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.red,
-            width: 1.3,
-          ),
-          borderRadius: BorderRadius.circular(16.0),
-        ),
-        hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
-        hintText: hintText,
-        suffixIcon: suffixIcon,
-        fillColor: backgroundColor ?? ColorsManager.moreLightGray,
-        filled: true,
-      ),
-      obscureText: isObscureText ?? false,
       style: TextStyles.font14DarkBlueMedium,
-      validator: (value) {
-        return validator(value);
-      },
+      obscureText: obstureText ?? false,
+      decoration: InputDecoration(
+        // give you more control about padding
+        isDense: true,
+        contentPadding: contextPadding ??
+            EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+        hintText: hintText,
+        hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
+
+        suffixIcon: pefixIcon,
+        prefixIcon: suffixIcon,
+
+        fillColor: backgroundColor ?? ColorsManager.moreLighterGray,
+        filled: true,
+
+        enabledBorder: enableBorder ??
+            OutlineInputBorder(
+                borderRadius: BorderRadius.circular(16),
+                borderSide:
+                    BorderSide(width: 1.3, color: ColorsManager.lighterGray)),
+        focusedBorder: focusBorder ??
+            OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
+              borderSide: BorderSide(color: ColorsManager.mainBlue),
+            ),
+      ),
     );
   }
 }

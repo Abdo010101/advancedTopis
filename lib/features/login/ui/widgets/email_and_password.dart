@@ -1,80 +1,58 @@
+import 'package:development/core/theming/style.dart';
+import 'package:development/core/widgets/app_text_button.dart';
 import 'package:development/core/widgets/app_text_form_filed.dart';
-import 'package:development/features/login/ui/widgets/password_valdiation.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helpers/spacing.dart';
 
 class EmailAndPassword extends StatefulWidget {
-  const EmailAndPassword({super.key});
+  EmailAndPassword({super.key});
 
   @override
   State<EmailAndPassword> createState() => _EmailAndPasswordState();
 }
 
 class _EmailAndPasswordState extends State<EmailAndPassword> {
-  late TextEditingController passwordController;
-
-  @override
-  void initState() {
-    super.initState();
-
-    setupPasswordControllerListener();
-  }
-
-  void setupPasswordControllerListener() {
-    passwordController.addListener(() {});
-  }
+  final formKey = GlobalKey<FormState>();
+  bool isObscure = true;
 
   @override
   Widget build(BuildContext context) {
     return Form(
-      // key: context.read<LoginCubit>().formKey,
+      key: formKey,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AppTextFormField(
             hintText: 'Email',
-            validator: (value) {
-              // if (value == null ||
-              //     value.isEmpty ||
-              //     !AppRegex.isEmailValid(value)) {
-              //   return 'Please enter a valid email';
-              // }
-            },
-            //    controller: context.read<LoginCubit>().emailController,
           ),
-          verticalSpace(18),
+          verticalSpace(30),
           AppTextFormField(
-            //    controller: context.read<LoginCubit>().passwordController,
-            hintText: 'Password',
-            // isObscureText: isObscureText,
-            suffixIcon: GestureDetector(
-              onTap: () {},
-              child: Icon(
-                Icons.visibility,
-              ),
-            ),
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Please enter a valid password';
-              }
-            },
+            hintText: 'password',
+            obstureText: isObscure,
+            pefixIcon: GestureDetector(
+                onTap: () {
+                  isObscure = !isObscure;
+                  setState(() {});
+                },
+                child:
+                    Icon(isObscure ? Icons.visibility_off : Icons.visibility)),
           ),
           verticalSpace(24),
-          // PasswordValidations(
-          //   hasLowerCase: hasLowercase,
-          //   hasUpperCase: hasUppercase,
-          //   hasSpecialCharacters: hasSpecialCharacters,
-          //   hasNumber: hasNumber,
-          //   hasMinLength: hasMinLength,
-          // ),
+          Align(
+            alignment: AlignmentDirectional.bottomEnd,
+            child: Text(
+              'Forget Passowrd!',
+              style: TextStyles.font14BlueSemiBold,
+            ),
+          ),
+          verticalSpace(24),
+          AppTextButton(
+              buttonText: 'Login',
+              textStyle: TextStyles.font16WhiteMedium,
+              onPressed: () {})
         ],
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    passwordController.dispose();
-    super.dispose();
   }
 }

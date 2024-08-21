@@ -9,7 +9,8 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [Text('Homeeeeeeeeeeeeeeeeeeeeeee;')],
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [Center(child: Text('Homeeeeeeeeeeeeeeeeeeeeeee;'))],
         ),
       ),
     );

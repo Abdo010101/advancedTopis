@@ -72,9 +72,8 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               if (val == null || val.isEmpty) {
                 return context.read<LoginCubit>().errorMessages['email'] ??
                     'the passowrd must not empty';
-              } else {
-                return context.read<LoginCubit>().errorMessages['email'];
               }
+              return null;
             },
             controller: context.read<LoginCubit>().emailController,
           ),

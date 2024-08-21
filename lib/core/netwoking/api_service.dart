@@ -15,6 +15,4 @@ abstract class ApiService {
   Future<LoginResponse> login(
     @Body() LoginRequestBody loginRequestBody,
   );
-
-
 }

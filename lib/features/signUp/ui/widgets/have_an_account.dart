@@ -5,25 +5,25 @@ import 'package:development/features/login/ui/widgets/login_bloc_listener.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class DontHaveAccountText extends StatelessWidget {
-  const DontHaveAccountText({super.key});
+class HaveAccountText extends StatelessWidget {
+  const HaveAccountText({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.pushNamed(Routes.signUp);
+        context.pushNamed(Routes.loginScreen);
       },
       child: RichText(
         textAlign: TextAlign.center,
         text: TextSpan(
           children: [
             TextSpan(
-              text: 'Don\'t have an account?',
+              text: 'have an account?',
               style: TextStyles.font13DarkBlueRegular,
             ),
             TextSpan(
-              text: ' Sign Up',
+              text: ' Login in',
               style: TextStyles.font13BlueSemiBold,
             ),
           ],

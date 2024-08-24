@@ -45,7 +45,6 @@ class AppTextFormField extends StatelessWidget {
       obscureText: obstureText ?? false,
       decoration: InputDecoration(
         // give you more control about padding
-
         isDense: true,
         contentPadding: contextPadding ??
             EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),

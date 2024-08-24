@@ -52,7 +52,4 @@ Widget makeValdationOnRow(String message, bool hasValidated) {
       ),
     ],
   );
-
-
-  
 }

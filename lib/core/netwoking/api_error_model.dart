@@ -9,7 +9,7 @@ class ApiErrorModel {
   final dynamic data;
   final int? code;
 
-  ApiErrorModel({required this.message, this.code,this.data});
+  ApiErrorModel({required this.message, this.code, this.data});
   factory ApiErrorModel.fromJson(Map<String, dynamic> json) =>
       _$ApiErrorModelFromJson(json);
 

@@ -41,6 +41,8 @@ class LoginCubit extends Cubit<LoginState> {
         errorMessages[key] = value.toString(); // Convert all values to String
       });
 
+      print(errorMessages);
+
       emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
     });
   }

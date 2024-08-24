@@ -71,7 +71,10 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             validator: (String? val) {
               if (val == null || val.isEmpty) {
                 return context.read<LoginCubit>().errorMessages['email'] ??
-                    'the passowrd must not empty';
+                    'the email must not empty';
+              } else if (context.read<LoginCubit>().errorMessages['email'] !=
+                  null) {
+                return context.read<LoginCubit>().errorMessages['email'];
               }
               return null;
             },
@@ -128,6 +131,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
 }
 
 void validateThenLoginFunction(BuildContext context) {
+  context.read<LoginCubit>().errorMessages.clear();
   if (context.read<LoginCubit>().formKey.currentState!.validate()) {
     context.read<LoginCubit>().userLogin(
         loginRequestBody: LoginRequestBody(

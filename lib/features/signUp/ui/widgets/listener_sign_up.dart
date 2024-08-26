@@ -20,7 +20,7 @@ class EmitSignUpListener extends StatelessWidget {
           showDialog(
               context: context,
               builder: (context) {
-                return Center(
+                return const Center(
                   child: CircularProgressIndicator(),
                 );
               });
@@ -45,7 +45,7 @@ class EmitSignUpListener extends StatelessWidget {
               });
         });
       },
-      child: SizedBox.shrink(),
+      child: const SizedBox.shrink(),
     );
   }
 }

@@ -132,6 +132,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
 
 void validateThenLoginFunction(BuildContext context) {
   context.read<LoginCubit>().errorMessages.clear();
+  log(context.read<LoginCubit>().formKey.currentState!.validate().toString());
   if (context.read<LoginCubit>().formKey.currentState!.validate()) {
     context.read<LoginCubit>().userLogin(
         loginRequestBody: LoginRequestBody(

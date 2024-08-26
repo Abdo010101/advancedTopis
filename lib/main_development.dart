@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
-  setUp();
+  WidgetsFlutterBinding.ensureInitialized();
+  await setUp();
+
   // to fix text being hidden  bug in screen util in realse mode
 
   await ScreenUtil.ensureScreenSize();

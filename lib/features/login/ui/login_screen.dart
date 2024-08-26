@@ -17,7 +17,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<LoginCubit>(),
+      create: (context) => getIt.get<LoginCubit>(),
       child: Scaffold(
         body: SafeArea(
           child: Padding(
@@ -44,9 +44,9 @@ class LoginScreen extends StatelessWidget {
                         ],
                       ),
                       verticalSpace(36),
-                      TermsAndConditionsText(),
+                      const TermsAndConditionsText(),
                       verticalSpace(36),
-                      Align(
+                      const Align(
                           alignment: AlignmentDirectional.center,
                           child: DontHaveAccountText())
                     ],

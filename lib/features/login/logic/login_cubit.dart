@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'dart:developer';
 
 import 'package:development/core/netwoking/api_result.dart';
 import 'package:development/features/login/data/models/login_request_body.dart';
@@ -31,17 +31,17 @@ class LoginCubit extends Cubit<LoginState> {
   ///*********************************************************************************************** */
   // first funciton
   void userLogin({required LoginRequestBody loginRequestBody}) async {
-    emit(LoginState.loading());
+    emit(const LoginState.loading());
     final response = await _loginRepo.login(loginRequestBody: loginRequestBody);
 
     response.when(success: (loginRespone) {
       emit(LoginState.success(loginRespone));
     }, failure: (error) {
-      error.apiErrorModel.data.forEach((key, value) {
-        errorMessages[key] = value.toString(); // Convert all values to String
-      });
-
-      print(errorMessages);
+      if (error.apiErrorModel.data == null) {
+        error.apiErrorModel.data.forEach((key, value) {
+          errorMessages[key] = value.toString(); // Convert all values to String
+        });
+      }
 
       emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
     });

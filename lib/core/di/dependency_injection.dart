@@ -12,9 +12,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 final getIt = GetIt.instance;
 
 Future<void> setUp() async {
+  Dio dio = DioFactory.getDio();
+  
   SharedPreferences pref = await SharedPreferences.getInstance();
   getIt.registerSingleton<SharedPreferences>(pref);
-  Dio dio = DioFactory.getDio();
 
   getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
 

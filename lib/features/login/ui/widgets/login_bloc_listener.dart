@@ -21,7 +21,7 @@ class LoginBlocListenner extends StatelessWidget {
             showDialog(
                 context: context,
                 builder: (context) {
-                  return Center(
+                  return const Center(
                       child: CircularProgressIndicator(
                     color: ColorsManager.mainBlue,
                   ));
@@ -37,7 +37,7 @@ class LoginBlocListenner extends StatelessWidget {
                 context: context,
                 builder: (context) {
                   return AlertDialog(
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.error,
                       color: Colors.red,
                     ),
@@ -60,7 +60,7 @@ class LoginBlocListenner extends StatelessWidget {
           },
         );
       },
-      child: SizedBox.shrink(),
+      child: const SizedBox.shrink(),
     );
   }
 }

@@ -43,14 +43,28 @@ class SignUpCubit extends Cubit<SignUpState> {
 
     response.when(success: (signUpResponse) {
       emit(SignUpState.success(signUpResponse));
-    }, failure: (Erro) {
-      Erro.apiErrorModel.data.forEach((key, value) {
+    }, failure: (erro) {
+      erro.apiErrorModel.data.forEach((key, value) {
         errorMessage[key] = value;
       });
       print("mesf arer ${errorMessage.toString()}");
 
       emit(SignUpState.error(
-          error: Erro.apiErrorModel.message ?? 'error happen'));
+          error: erro.apiErrorModel.message ?? 'error happen'));
+    });
+  }
+
+  //** get the user data as demo for handle data come form api ro the cahced data */
+
+  void getDataOfUser() async {
+    emit(const SignUpState.getUserDataFromApiOrCachedLoading());
+    var response = await _signupRepo.fetchData();
+
+    response.when(success: (uesrDataModel) {
+      emit(SignUpState.getUserDataFromApiOrCachedSuccess(uesrDataModel));
+    }, failure: (error) {
+      emit(SignUpState.getUserDataFromApiOrCachedError(
+          error: error.apiErrorModel.message ?? 'No data cached'));
     });
   }
 }

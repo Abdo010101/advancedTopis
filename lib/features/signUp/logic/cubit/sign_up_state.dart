@@ -16,4 +16,11 @@ class SignUpState<T> with _$SignUpState {
   const factory SignUpState.chnagePasswordVisiblity() = ChangePasswordVisiblity;
   const factory SignUpState.chnageConfirmPasswordVisiblity() =
       ChangeConfirmPasswordVisiblity;
+
+  const factory SignUpState.getUserDataFromApiOrCachedLoading() =
+      GetUserDataFromApiOrCachedLoading;
+  const factory SignUpState.getUserDataFromApiOrCachedSuccess(T data) =
+      GetUserDataFromApiOrCachedSuccess<T>;
+  const factory SignUpState.getUserDataFromApiOrCachedError(
+      {required String error}) = GetUserDataFromApiOrCachedError;
 }

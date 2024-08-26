@@ -3,6 +3,7 @@ import 'package:development/features/login/data/models/login_request_body.dart';
 import 'package:development/features/login/data/models/login_response/login_response.dart';
 import 'package:development/features/signUp/data/models/signUp_request_model.dart';
 import 'package:development/features/signUp/data/models/sign_up_model/sign_up_model.dart';
+import 'package:development/features/signUp/data/models/user_model.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
@@ -19,7 +20,8 @@ abstract class ApiService {
   );
 
   @POST(ApiConstant.apiSignUp)
- Future<SignUpModel> signUp(
-  @Body() SignUpRequestModel signUpRequestModel
- );
+  Future<SignUpModel> signUp(@Body() SignUpRequestModel signUpRequestModel);
+
+  @GET(ApiConstant.apiSignUp)
+  Future<UserData> getUserData();
 }

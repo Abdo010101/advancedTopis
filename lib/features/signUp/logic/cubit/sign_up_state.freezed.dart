@@ -24,6 +24,9 @@ mixin _$SignUpState<T> {
     required TResult Function(String error) error,
     required TResult Function() chnagePasswordVisiblity,
     required TResult Function() chnageConfirmPasswordVisiblity,
+    required TResult Function() getUserDataFromApiOrCachedLoading,
+    required TResult Function(T data) getUserDataFromApiOrCachedSuccess,
+    required TResult Function(String error) getUserDataFromApiOrCachedError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +37,9 @@ mixin _$SignUpState<T> {
     TResult? Function(String error)? error,
     TResult? Function()? chnagePasswordVisiblity,
     TResult? Function()? chnageConfirmPasswordVisiblity,
+    TResult? Function()? getUserDataFromApiOrCachedLoading,
+    TResult? Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult? Function(String error)? getUserDataFromApiOrCachedError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +50,9 @@ mixin _$SignUpState<T> {
     TResult Function(String error)? error,
     TResult Function()? chnagePasswordVisiblity,
     TResult Function()? chnageConfirmPasswordVisiblity,
+    TResult Function()? getUserDataFromApiOrCachedLoading,
+    TResult Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult Function(String error)? getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -57,6 +66,12 @@ mixin _$SignUpState<T> {
         chnagePasswordVisiblity,
     required TResult Function(ChangeConfirmPasswordVisiblity<T> value)
         chnageConfirmPasswordVisiblity,
+    required TResult Function(GetUserDataFromApiOrCachedLoading<T> value)
+        getUserDataFromApiOrCachedLoading,
+    required TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)
+        getUserDataFromApiOrCachedSuccess,
+    required TResult Function(GetUserDataFromApiOrCachedError<T> value)
+        getUserDataFromApiOrCachedError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +84,12 @@ mixin _$SignUpState<T> {
         chnagePasswordVisiblity,
     TResult? Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult? Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult? Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult? Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -80,6 +101,12 @@ mixin _$SignUpState<T> {
     TResult Function(ChangePasswordVisiblity<T> value)? chnagePasswordVisiblity,
     TResult Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -147,6 +174,9 @@ class _$InitalImpl<T> implements _Inital<T> {
     required TResult Function(String error) error,
     required TResult Function() chnagePasswordVisiblity,
     required TResult Function() chnageConfirmPasswordVisiblity,
+    required TResult Function() getUserDataFromApiOrCachedLoading,
+    required TResult Function(T data) getUserDataFromApiOrCachedSuccess,
+    required TResult Function(String error) getUserDataFromApiOrCachedError,
   }) {
     return intial();
   }
@@ -160,6 +190,9 @@ class _$InitalImpl<T> implements _Inital<T> {
     TResult? Function(String error)? error,
     TResult? Function()? chnagePasswordVisiblity,
     TResult? Function()? chnageConfirmPasswordVisiblity,
+    TResult? Function()? getUserDataFromApiOrCachedLoading,
+    TResult? Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult? Function(String error)? getUserDataFromApiOrCachedError,
   }) {
     return intial?.call();
   }
@@ -173,6 +206,9 @@ class _$InitalImpl<T> implements _Inital<T> {
     TResult Function(String error)? error,
     TResult Function()? chnagePasswordVisiblity,
     TResult Function()? chnageConfirmPasswordVisiblity,
+    TResult Function()? getUserDataFromApiOrCachedLoading,
+    TResult Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult Function(String error)? getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (intial != null) {
@@ -192,6 +228,12 @@ class _$InitalImpl<T> implements _Inital<T> {
         chnagePasswordVisiblity,
     required TResult Function(ChangeConfirmPasswordVisiblity<T> value)
         chnageConfirmPasswordVisiblity,
+    required TResult Function(GetUserDataFromApiOrCachedLoading<T> value)
+        getUserDataFromApiOrCachedLoading,
+    required TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)
+        getUserDataFromApiOrCachedSuccess,
+    required TResult Function(GetUserDataFromApiOrCachedError<T> value)
+        getUserDataFromApiOrCachedError,
   }) {
     return intial(this);
   }
@@ -207,6 +249,12 @@ class _$InitalImpl<T> implements _Inital<T> {
         chnagePasswordVisiblity,
     TResult? Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult? Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult? Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult? Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
   }) {
     return intial?.call(this);
   }
@@ -221,6 +269,12 @@ class _$InitalImpl<T> implements _Inital<T> {
     TResult Function(ChangePasswordVisiblity<T> value)? chnagePasswordVisiblity,
     TResult Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (intial != null) {
@@ -278,6 +332,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function(String error) error,
     required TResult Function() chnagePasswordVisiblity,
     required TResult Function() chnageConfirmPasswordVisiblity,
+    required TResult Function() getUserDataFromApiOrCachedLoading,
+    required TResult Function(T data) getUserDataFromApiOrCachedSuccess,
+    required TResult Function(String error) getUserDataFromApiOrCachedError,
   }) {
     return loading();
   }
@@ -291,6 +348,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function(String error)? error,
     TResult? Function()? chnagePasswordVisiblity,
     TResult? Function()? chnageConfirmPasswordVisiblity,
+    TResult? Function()? getUserDataFromApiOrCachedLoading,
+    TResult? Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult? Function(String error)? getUserDataFromApiOrCachedError,
   }) {
     return loading?.call();
   }
@@ -304,6 +364,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(String error)? error,
     TResult Function()? chnagePasswordVisiblity,
     TResult Function()? chnageConfirmPasswordVisiblity,
+    TResult Function()? getUserDataFromApiOrCachedLoading,
+    TResult Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult Function(String error)? getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -323,6 +386,12 @@ class _$LoadingImpl<T> implements Loading<T> {
         chnagePasswordVisiblity,
     required TResult Function(ChangeConfirmPasswordVisiblity<T> value)
         chnageConfirmPasswordVisiblity,
+    required TResult Function(GetUserDataFromApiOrCachedLoading<T> value)
+        getUserDataFromApiOrCachedLoading,
+    required TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)
+        getUserDataFromApiOrCachedSuccess,
+    required TResult Function(GetUserDataFromApiOrCachedError<T> value)
+        getUserDataFromApiOrCachedError,
   }) {
     return loading(this);
   }
@@ -338,6 +407,12 @@ class _$LoadingImpl<T> implements Loading<T> {
         chnagePasswordVisiblity,
     TResult? Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult? Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult? Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult? Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
   }) {
     return loading?.call(this);
   }
@@ -352,6 +427,12 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(ChangePasswordVisiblity<T> value)? chnagePasswordVisiblity,
     TResult Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -436,6 +517,9 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function(String error) error,
     required TResult Function() chnagePasswordVisiblity,
     required TResult Function() chnageConfirmPasswordVisiblity,
+    required TResult Function() getUserDataFromApiOrCachedLoading,
+    required TResult Function(T data) getUserDataFromApiOrCachedSuccess,
+    required TResult Function(String error) getUserDataFromApiOrCachedError,
   }) {
     return success(data);
   }
@@ -449,6 +533,9 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function(String error)? error,
     TResult? Function()? chnagePasswordVisiblity,
     TResult? Function()? chnageConfirmPasswordVisiblity,
+    TResult? Function()? getUserDataFromApiOrCachedLoading,
+    TResult? Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult? Function(String error)? getUserDataFromApiOrCachedError,
   }) {
     return success?.call(data);
   }
@@ -462,6 +549,9 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function(String error)? error,
     TResult Function()? chnagePasswordVisiblity,
     TResult Function()? chnageConfirmPasswordVisiblity,
+    TResult Function()? getUserDataFromApiOrCachedLoading,
+    TResult Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult Function(String error)? getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -481,6 +571,12 @@ class _$SuccessImpl<T> implements Success<T> {
         chnagePasswordVisiblity,
     required TResult Function(ChangeConfirmPasswordVisiblity<T> value)
         chnageConfirmPasswordVisiblity,
+    required TResult Function(GetUserDataFromApiOrCachedLoading<T> value)
+        getUserDataFromApiOrCachedLoading,
+    required TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)
+        getUserDataFromApiOrCachedSuccess,
+    required TResult Function(GetUserDataFromApiOrCachedError<T> value)
+        getUserDataFromApiOrCachedError,
   }) {
     return success(this);
   }
@@ -496,6 +592,12 @@ class _$SuccessImpl<T> implements Success<T> {
         chnagePasswordVisiblity,
     TResult? Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult? Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult? Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult? Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
   }) {
     return success?.call(this);
   }
@@ -510,6 +612,12 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function(ChangePasswordVisiblity<T> value)? chnagePasswordVisiblity,
     TResult Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -598,6 +706,9 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function(String error) error,
     required TResult Function() chnagePasswordVisiblity,
     required TResult Function() chnageConfirmPasswordVisiblity,
+    required TResult Function() getUserDataFromApiOrCachedLoading,
+    required TResult Function(T data) getUserDataFromApiOrCachedSuccess,
+    required TResult Function(String error) getUserDataFromApiOrCachedError,
   }) {
     return error(this.error);
   }
@@ -611,6 +722,9 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function(String error)? error,
     TResult? Function()? chnagePasswordVisiblity,
     TResult? Function()? chnageConfirmPasswordVisiblity,
+    TResult? Function()? getUserDataFromApiOrCachedLoading,
+    TResult? Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult? Function(String error)? getUserDataFromApiOrCachedError,
   }) {
     return error?.call(this.error);
   }
@@ -624,6 +738,9 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function(String error)? error,
     TResult Function()? chnagePasswordVisiblity,
     TResult Function()? chnageConfirmPasswordVisiblity,
+    TResult Function()? getUserDataFromApiOrCachedLoading,
+    TResult Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult Function(String error)? getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -643,6 +760,12 @@ class _$ErrorImpl<T> implements Error<T> {
         chnagePasswordVisiblity,
     required TResult Function(ChangeConfirmPasswordVisiblity<T> value)
         chnageConfirmPasswordVisiblity,
+    required TResult Function(GetUserDataFromApiOrCachedLoading<T> value)
+        getUserDataFromApiOrCachedLoading,
+    required TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)
+        getUserDataFromApiOrCachedSuccess,
+    required TResult Function(GetUserDataFromApiOrCachedError<T> value)
+        getUserDataFromApiOrCachedError,
   }) {
     return error(this);
   }
@@ -658,6 +781,12 @@ class _$ErrorImpl<T> implements Error<T> {
         chnagePasswordVisiblity,
     TResult? Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult? Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult? Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult? Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
   }) {
     return error?.call(this);
   }
@@ -672,6 +801,12 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function(ChangePasswordVisiblity<T> value)? chnagePasswordVisiblity,
     TResult Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -737,6 +872,9 @@ class _$ChangePasswordVisiblityImpl<T> implements ChangePasswordVisiblity<T> {
     required TResult Function(String error) error,
     required TResult Function() chnagePasswordVisiblity,
     required TResult Function() chnageConfirmPasswordVisiblity,
+    required TResult Function() getUserDataFromApiOrCachedLoading,
+    required TResult Function(T data) getUserDataFromApiOrCachedSuccess,
+    required TResult Function(String error) getUserDataFromApiOrCachedError,
   }) {
     return chnagePasswordVisiblity();
   }
@@ -750,6 +888,9 @@ class _$ChangePasswordVisiblityImpl<T> implements ChangePasswordVisiblity<T> {
     TResult? Function(String error)? error,
     TResult? Function()? chnagePasswordVisiblity,
     TResult? Function()? chnageConfirmPasswordVisiblity,
+    TResult? Function()? getUserDataFromApiOrCachedLoading,
+    TResult? Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult? Function(String error)? getUserDataFromApiOrCachedError,
   }) {
     return chnagePasswordVisiblity?.call();
   }
@@ -763,6 +904,9 @@ class _$ChangePasswordVisiblityImpl<T> implements ChangePasswordVisiblity<T> {
     TResult Function(String error)? error,
     TResult Function()? chnagePasswordVisiblity,
     TResult Function()? chnageConfirmPasswordVisiblity,
+    TResult Function()? getUserDataFromApiOrCachedLoading,
+    TResult Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult Function(String error)? getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (chnagePasswordVisiblity != null) {
@@ -782,6 +926,12 @@ class _$ChangePasswordVisiblityImpl<T> implements ChangePasswordVisiblity<T> {
         chnagePasswordVisiblity,
     required TResult Function(ChangeConfirmPasswordVisiblity<T> value)
         chnageConfirmPasswordVisiblity,
+    required TResult Function(GetUserDataFromApiOrCachedLoading<T> value)
+        getUserDataFromApiOrCachedLoading,
+    required TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)
+        getUserDataFromApiOrCachedSuccess,
+    required TResult Function(GetUserDataFromApiOrCachedError<T> value)
+        getUserDataFromApiOrCachedError,
   }) {
     return chnagePasswordVisiblity(this);
   }
@@ -797,6 +947,12 @@ class _$ChangePasswordVisiblityImpl<T> implements ChangePasswordVisiblity<T> {
         chnagePasswordVisiblity,
     TResult? Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult? Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult? Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult? Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
   }) {
     return chnagePasswordVisiblity?.call(this);
   }
@@ -811,6 +967,12 @@ class _$ChangePasswordVisiblityImpl<T> implements ChangePasswordVisiblity<T> {
     TResult Function(ChangePasswordVisiblity<T> value)? chnagePasswordVisiblity,
     TResult Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (chnagePasswordVisiblity != null) {
@@ -873,6 +1035,9 @@ class _$ChangeConfirmPasswordVisiblityImpl<T>
     required TResult Function(String error) error,
     required TResult Function() chnagePasswordVisiblity,
     required TResult Function() chnageConfirmPasswordVisiblity,
+    required TResult Function() getUserDataFromApiOrCachedLoading,
+    required TResult Function(T data) getUserDataFromApiOrCachedSuccess,
+    required TResult Function(String error) getUserDataFromApiOrCachedError,
   }) {
     return chnageConfirmPasswordVisiblity();
   }
@@ -886,6 +1051,9 @@ class _$ChangeConfirmPasswordVisiblityImpl<T>
     TResult? Function(String error)? error,
     TResult? Function()? chnagePasswordVisiblity,
     TResult? Function()? chnageConfirmPasswordVisiblity,
+    TResult? Function()? getUserDataFromApiOrCachedLoading,
+    TResult? Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult? Function(String error)? getUserDataFromApiOrCachedError,
   }) {
     return chnageConfirmPasswordVisiblity?.call();
   }
@@ -899,6 +1067,9 @@ class _$ChangeConfirmPasswordVisiblityImpl<T>
     TResult Function(String error)? error,
     TResult Function()? chnagePasswordVisiblity,
     TResult Function()? chnageConfirmPasswordVisiblity,
+    TResult Function()? getUserDataFromApiOrCachedLoading,
+    TResult Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult Function(String error)? getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (chnageConfirmPasswordVisiblity != null) {
@@ -918,6 +1089,12 @@ class _$ChangeConfirmPasswordVisiblityImpl<T>
         chnagePasswordVisiblity,
     required TResult Function(ChangeConfirmPasswordVisiblity<T> value)
         chnageConfirmPasswordVisiblity,
+    required TResult Function(GetUserDataFromApiOrCachedLoading<T> value)
+        getUserDataFromApiOrCachedLoading,
+    required TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)
+        getUserDataFromApiOrCachedSuccess,
+    required TResult Function(GetUserDataFromApiOrCachedError<T> value)
+        getUserDataFromApiOrCachedError,
   }) {
     return chnageConfirmPasswordVisiblity(this);
   }
@@ -933,6 +1110,12 @@ class _$ChangeConfirmPasswordVisiblityImpl<T>
         chnagePasswordVisiblity,
     TResult? Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult? Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult? Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult? Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
   }) {
     return chnageConfirmPasswordVisiblity?.call(this);
   }
@@ -947,6 +1130,12 @@ class _$ChangeConfirmPasswordVisiblityImpl<T>
     TResult Function(ChangePasswordVisiblity<T> value)? chnagePasswordVisiblity,
     TResult Function(ChangeConfirmPasswordVisiblity<T> value)?
         chnageConfirmPasswordVisiblity,
+    TResult Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
     required TResult orElse(),
   }) {
     if (chnageConfirmPasswordVisiblity != null) {
@@ -959,4 +1148,563 @@ class _$ChangeConfirmPasswordVisiblityImpl<T>
 abstract class ChangeConfirmPasswordVisiblity<T> implements SignUpState<T> {
   const factory ChangeConfirmPasswordVisiblity() =
       _$ChangeConfirmPasswordVisiblityImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetUserDataFromApiOrCachedLoadingImplCopyWith<T, $Res> {
+  factory _$$GetUserDataFromApiOrCachedLoadingImplCopyWith(
+          _$GetUserDataFromApiOrCachedLoadingImpl<T> value,
+          $Res Function(_$GetUserDataFromApiOrCachedLoadingImpl<T>) then) =
+      __$$GetUserDataFromApiOrCachedLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetUserDataFromApiOrCachedLoadingImplCopyWithImpl<T, $Res>
+    extends _$SignUpStateCopyWithImpl<T, $Res,
+        _$GetUserDataFromApiOrCachedLoadingImpl<T>>
+    implements _$$GetUserDataFromApiOrCachedLoadingImplCopyWith<T, $Res> {
+  __$$GetUserDataFromApiOrCachedLoadingImplCopyWithImpl(
+      _$GetUserDataFromApiOrCachedLoadingImpl<T> _value,
+      $Res Function(_$GetUserDataFromApiOrCachedLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetUserDataFromApiOrCachedLoadingImpl<T>
+    implements GetUserDataFromApiOrCachedLoading<T> {
+  const _$GetUserDataFromApiOrCachedLoadingImpl();
+
+  @override
+  String toString() {
+    return 'SignUpState<$T>.getUserDataFromApiOrCachedLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetUserDataFromApiOrCachedLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() intial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
+    required TResult Function() chnagePasswordVisiblity,
+    required TResult Function() chnageConfirmPasswordVisiblity,
+    required TResult Function() getUserDataFromApiOrCachedLoading,
+    required TResult Function(T data) getUserDataFromApiOrCachedSuccess,
+    required TResult Function(String error) getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? intial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? chnagePasswordVisiblity,
+    TResult? Function()? chnageConfirmPasswordVisiblity,
+    TResult? Function()? getUserDataFromApiOrCachedLoading,
+    TResult? Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult? Function(String error)? getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? intial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
+    TResult Function()? chnagePasswordVisiblity,
+    TResult Function()? chnageConfirmPasswordVisiblity,
+    TResult Function()? getUserDataFromApiOrCachedLoading,
+    TResult Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult Function(String error)? getUserDataFromApiOrCachedError,
+    required TResult orElse(),
+  }) {
+    if (getUserDataFromApiOrCachedLoading != null) {
+      return getUserDataFromApiOrCachedLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Inital<T> value) intial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(ChangePasswordVisiblity<T> value)
+        chnagePasswordVisiblity,
+    required TResult Function(ChangeConfirmPasswordVisiblity<T> value)
+        chnageConfirmPasswordVisiblity,
+    required TResult Function(GetUserDataFromApiOrCachedLoading<T> value)
+        getUserDataFromApiOrCachedLoading,
+    required TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)
+        getUserDataFromApiOrCachedSuccess,
+    required TResult Function(GetUserDataFromApiOrCachedError<T> value)
+        getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Inital<T> value)? intial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(ChangePasswordVisiblity<T> value)?
+        chnagePasswordVisiblity,
+    TResult? Function(ChangeConfirmPasswordVisiblity<T> value)?
+        chnageConfirmPasswordVisiblity,
+    TResult? Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult? Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult? Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Inital<T> value)? intial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(ChangePasswordVisiblity<T> value)? chnagePasswordVisiblity,
+    TResult Function(ChangeConfirmPasswordVisiblity<T> value)?
+        chnageConfirmPasswordVisiblity,
+    TResult Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
+    required TResult orElse(),
+  }) {
+    if (getUserDataFromApiOrCachedLoading != null) {
+      return getUserDataFromApiOrCachedLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetUserDataFromApiOrCachedLoading<T> implements SignUpState<T> {
+  const factory GetUserDataFromApiOrCachedLoading() =
+      _$GetUserDataFromApiOrCachedLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetUserDataFromApiOrCachedSuccessImplCopyWith<T, $Res> {
+  factory _$$GetUserDataFromApiOrCachedSuccessImplCopyWith(
+          _$GetUserDataFromApiOrCachedSuccessImpl<T> value,
+          $Res Function(_$GetUserDataFromApiOrCachedSuccessImpl<T>) then) =
+      __$$GetUserDataFromApiOrCachedSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$GetUserDataFromApiOrCachedSuccessImplCopyWithImpl<T, $Res>
+    extends _$SignUpStateCopyWithImpl<T, $Res,
+        _$GetUserDataFromApiOrCachedSuccessImpl<T>>
+    implements _$$GetUserDataFromApiOrCachedSuccessImplCopyWith<T, $Res> {
+  __$$GetUserDataFromApiOrCachedSuccessImplCopyWithImpl(
+      _$GetUserDataFromApiOrCachedSuccessImpl<T> _value,
+      $Res Function(_$GetUserDataFromApiOrCachedSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetUserDataFromApiOrCachedSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetUserDataFromApiOrCachedSuccessImpl<T>
+    implements GetUserDataFromApiOrCachedSuccess<T> {
+  const _$GetUserDataFromApiOrCachedSuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'SignUpState<$T>.getUserDataFromApiOrCachedSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetUserDataFromApiOrCachedSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetUserDataFromApiOrCachedSuccessImplCopyWith<T,
+          _$GetUserDataFromApiOrCachedSuccessImpl<T>>
+      get copyWith => __$$GetUserDataFromApiOrCachedSuccessImplCopyWithImpl<T,
+          _$GetUserDataFromApiOrCachedSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() intial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
+    required TResult Function() chnagePasswordVisiblity,
+    required TResult Function() chnageConfirmPasswordVisiblity,
+    required TResult Function() getUserDataFromApiOrCachedLoading,
+    required TResult Function(T data) getUserDataFromApiOrCachedSuccess,
+    required TResult Function(String error) getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? intial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? chnagePasswordVisiblity,
+    TResult? Function()? chnageConfirmPasswordVisiblity,
+    TResult? Function()? getUserDataFromApiOrCachedLoading,
+    TResult? Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult? Function(String error)? getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? intial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
+    TResult Function()? chnagePasswordVisiblity,
+    TResult Function()? chnageConfirmPasswordVisiblity,
+    TResult Function()? getUserDataFromApiOrCachedLoading,
+    TResult Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult Function(String error)? getUserDataFromApiOrCachedError,
+    required TResult orElse(),
+  }) {
+    if (getUserDataFromApiOrCachedSuccess != null) {
+      return getUserDataFromApiOrCachedSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Inital<T> value) intial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(ChangePasswordVisiblity<T> value)
+        chnagePasswordVisiblity,
+    required TResult Function(ChangeConfirmPasswordVisiblity<T> value)
+        chnageConfirmPasswordVisiblity,
+    required TResult Function(GetUserDataFromApiOrCachedLoading<T> value)
+        getUserDataFromApiOrCachedLoading,
+    required TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)
+        getUserDataFromApiOrCachedSuccess,
+    required TResult Function(GetUserDataFromApiOrCachedError<T> value)
+        getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Inital<T> value)? intial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(ChangePasswordVisiblity<T> value)?
+        chnagePasswordVisiblity,
+    TResult? Function(ChangeConfirmPasswordVisiblity<T> value)?
+        chnageConfirmPasswordVisiblity,
+    TResult? Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult? Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult? Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Inital<T> value)? intial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(ChangePasswordVisiblity<T> value)? chnagePasswordVisiblity,
+    TResult Function(ChangeConfirmPasswordVisiblity<T> value)?
+        chnageConfirmPasswordVisiblity,
+    TResult Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
+    required TResult orElse(),
+  }) {
+    if (getUserDataFromApiOrCachedSuccess != null) {
+      return getUserDataFromApiOrCachedSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetUserDataFromApiOrCachedSuccess<T> implements SignUpState<T> {
+  const factory GetUserDataFromApiOrCachedSuccess(final T data) =
+      _$GetUserDataFromApiOrCachedSuccessImpl<T>;
+
+  T get data;
+  @JsonKey(ignore: true)
+  _$$GetUserDataFromApiOrCachedSuccessImplCopyWith<T,
+          _$GetUserDataFromApiOrCachedSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetUserDataFromApiOrCachedErrorImplCopyWith<T, $Res> {
+  factory _$$GetUserDataFromApiOrCachedErrorImplCopyWith(
+          _$GetUserDataFromApiOrCachedErrorImpl<T> value,
+          $Res Function(_$GetUserDataFromApiOrCachedErrorImpl<T>) then) =
+      __$$GetUserDataFromApiOrCachedErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$GetUserDataFromApiOrCachedErrorImplCopyWithImpl<T, $Res>
+    extends _$SignUpStateCopyWithImpl<T, $Res,
+        _$GetUserDataFromApiOrCachedErrorImpl<T>>
+    implements _$$GetUserDataFromApiOrCachedErrorImplCopyWith<T, $Res> {
+  __$$GetUserDataFromApiOrCachedErrorImplCopyWithImpl(
+      _$GetUserDataFromApiOrCachedErrorImpl<T> _value,
+      $Res Function(_$GetUserDataFromApiOrCachedErrorImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$GetUserDataFromApiOrCachedErrorImpl<T>(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetUserDataFromApiOrCachedErrorImpl<T>
+    implements GetUserDataFromApiOrCachedError<T> {
+  const _$GetUserDataFromApiOrCachedErrorImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'SignUpState<$T>.getUserDataFromApiOrCachedError(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetUserDataFromApiOrCachedErrorImpl<T> &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetUserDataFromApiOrCachedErrorImplCopyWith<T,
+          _$GetUserDataFromApiOrCachedErrorImpl<T>>
+      get copyWith => __$$GetUserDataFromApiOrCachedErrorImplCopyWithImpl<T,
+          _$GetUserDataFromApiOrCachedErrorImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() intial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
+    required TResult Function() chnagePasswordVisiblity,
+    required TResult Function() chnageConfirmPasswordVisiblity,
+    required TResult Function() getUserDataFromApiOrCachedLoading,
+    required TResult Function(T data) getUserDataFromApiOrCachedSuccess,
+    required TResult Function(String error) getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedError(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? intial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? chnagePasswordVisiblity,
+    TResult? Function()? chnageConfirmPasswordVisiblity,
+    TResult? Function()? getUserDataFromApiOrCachedLoading,
+    TResult? Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult? Function(String error)? getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedError?.call(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? intial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
+    TResult Function()? chnagePasswordVisiblity,
+    TResult Function()? chnageConfirmPasswordVisiblity,
+    TResult Function()? getUserDataFromApiOrCachedLoading,
+    TResult Function(T data)? getUserDataFromApiOrCachedSuccess,
+    TResult Function(String error)? getUserDataFromApiOrCachedError,
+    required TResult orElse(),
+  }) {
+    if (getUserDataFromApiOrCachedError != null) {
+      return getUserDataFromApiOrCachedError(this.error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Inital<T> value) intial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(ChangePasswordVisiblity<T> value)
+        chnagePasswordVisiblity,
+    required TResult Function(ChangeConfirmPasswordVisiblity<T> value)
+        chnageConfirmPasswordVisiblity,
+    required TResult Function(GetUserDataFromApiOrCachedLoading<T> value)
+        getUserDataFromApiOrCachedLoading,
+    required TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)
+        getUserDataFromApiOrCachedSuccess,
+    required TResult Function(GetUserDataFromApiOrCachedError<T> value)
+        getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Inital<T> value)? intial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(ChangePasswordVisiblity<T> value)?
+        chnagePasswordVisiblity,
+    TResult? Function(ChangeConfirmPasswordVisiblity<T> value)?
+        chnageConfirmPasswordVisiblity,
+    TResult? Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult? Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult? Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
+  }) {
+    return getUserDataFromApiOrCachedError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Inital<T> value)? intial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(ChangePasswordVisiblity<T> value)? chnagePasswordVisiblity,
+    TResult Function(ChangeConfirmPasswordVisiblity<T> value)?
+        chnageConfirmPasswordVisiblity,
+    TResult Function(GetUserDataFromApiOrCachedLoading<T> value)?
+        getUserDataFromApiOrCachedLoading,
+    TResult Function(GetUserDataFromApiOrCachedSuccess<T> value)?
+        getUserDataFromApiOrCachedSuccess,
+    TResult Function(GetUserDataFromApiOrCachedError<T> value)?
+        getUserDataFromApiOrCachedError,
+    required TResult orElse(),
+  }) {
+    if (getUserDataFromApiOrCachedError != null) {
+      return getUserDataFromApiOrCachedError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetUserDataFromApiOrCachedError<T> implements SignUpState<T> {
+  const factory GetUserDataFromApiOrCachedError({required final String error}) =
+      _$GetUserDataFromApiOrCachedErrorImpl<T>;
+
+  String get error;
+  @JsonKey(ignore: true)
+  _$$GetUserDataFromApiOrCachedErrorImplCopyWith<T,
+          _$GetUserDataFromApiOrCachedErrorImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }

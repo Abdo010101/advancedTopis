@@ -25,8 +25,7 @@ class SignupRepo {
     }
   }
 
-
- //***** this exmple for caching the data into sharred pref and USing internectConnectivityCheeker ***** */
+  //***** this exmple for caching the data into sharred pref and USing internectConnectivityCheeker ***** */
   // this is unreal funciton to get the data from api if there is internet get data else get form chced
   Future<ApiResult<UserData>> fetchData() async {
     var connectivityResult = await (Connectivity().checkConnectivity());
@@ -56,7 +55,6 @@ class SignupRepo {
       throw Exception('No user cached');
     }
   }
-
 
   ///*************************** End of Exmple ********************************************************* */
 }

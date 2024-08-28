@@ -1,7 +1,12 @@
+import 'dart:developer';
+
+import 'package:development/core/helpers/cache_helper.dart';
+import 'package:development/core/helpers/constants.dart';
 import 'package:development/core/helpers/extention.dart';
 import 'package:development/core/routing/routes.dart';
 import 'package:development/core/theming/colors.dart';
 import 'package:development/core/theming/style.dart';
+import 'package:development/features/login/data/models/login_response/login_response.dart';
 import 'package:development/features/login/logic/login_cubit.dart';
 import 'package:development/features/login/logic/login_state.dart';
 import 'package:flutter/material.dart';
@@ -27,8 +32,10 @@ class LoginBlocListenner extends StatelessWidget {
                   ));
                 });
           },
-          success: (loginResponse) {
+          success: (loginResponse) async {
             context.pop();
+            // we need to save token in sharred pref
+           
             context.pushNamed(Routes.homeScreen);
           },
           error: (String message) {
@@ -64,3 +71,4 @@ class LoginBlocListenner extends StatelessWidget {
     );
   }
 }
+

@@ -3,6 +3,7 @@ class ApiConstant {
 
   static const String apiLogin = "auth/login";
   static const String apiSignUp = "auth/register";
+  static const String apiGetSpecialztion = "specialization/index";
 }
 
 class ApiErrors {

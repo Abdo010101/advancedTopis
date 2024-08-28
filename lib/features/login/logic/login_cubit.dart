@@ -1,6 +1,8 @@
 import 'dart:developer';
 
-import 'package:development/core/netwoking/api_result.dart';
+import 'package:development/core/helpers/cache_helper.dart';
+import 'package:development/core/helpers/constants.dart';
+import 'package:development/core/netwoking/dio_factory.dart';
 import 'package:development/features/login/data/models/login_request_body.dart';
 import 'package:development/features/login/data/repos/login_repo.dart';
 import 'package:development/features/login/logic/login_state.dart';
@@ -34,7 +36,8 @@ class LoginCubit extends Cubit<LoginState> {
     emit(const LoginState.loading());
     final response = await _loginRepo.login(loginRequestBody: loginRequestBody);
 
-    response.when(success: (loginRespone) {
+    response.when(success: (loginRespone) async {
+      await savedToken(token: loginRespone.data?.token ?? "");
       emit(LoginState.success(loginRespone));
     }, failure: (error) {
       if (error.apiErrorModel.data == null) {
@@ -46,4 +49,10 @@ class LoginCubit extends Cubit<LoginState> {
       emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
     });
   }
+}
+
+Future<void> savedToken({required String token}) async {
+  await CacheHelper.setData(key: SharredKeys.userToken, value: token);
+  // after we have token we must aupdate the dio with new token
+  DioFactory.setTokenIntoHeaderAfterLogin(token);
 }

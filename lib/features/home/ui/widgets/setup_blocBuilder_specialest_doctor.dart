@@ -4,12 +4,12 @@ import 'package:development/features/home/data/models/specialest_doctor_model/sp
 import 'package:development/features/home/logic/cubit/home_cubit.dart';
 import 'package:development/features/home/logic/cubit/home_state.dart';
 import 'package:development/features/home/ui/widgets/list_view_doctor.dart';
-import 'package:development/features/home/ui/widgets/list_view_doctor_specialist.dart';
+import 'package:development/features/home/ui/widgets/list_view_specialist.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SetupBlocbuilderSpecialestDoctor extends StatelessWidget {
-  const SetupBlocbuilderSpecialestDoctor({super.key});
+class SetupBlocbuilderSpecialest extends StatelessWidget {
+  const SetupBlocbuilderSpecialest({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +23,8 @@ class SetupBlocbuilderSpecialestDoctor extends StatelessWidget {
           return const SetupError();
         }, getAllDoctorSpecilestSuccess: (specialestRespones) {
           var secialestList = specialestRespones.data;
-          var doctorLists = specialestRespones.data?[0]?.doctors;
 
-          return SetupSucess(
-              secialestList: secialestList, doctorLists: doctorLists);
+          return SetupSucess(secialestList: secialestList);
         }, getAllDoctorSpecilestError: (errorHandler) {
           return const SizedBox.shrink();
         }, orElse: () {
@@ -38,29 +36,19 @@ class SetupBlocbuilderSpecialestDoctor extends StatelessWidget {
 }
 
 class SetupSucess extends StatelessWidget {
-  const SetupSucess({
+  SetupSucess({
     super.key,
     required this.secialestList,
-    required this.doctorLists,
   });
 
   final List<SpecialestDoctorModel?>? secialestList;
-  final List<Doctor>? doctorLists;
+
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: [
-          ListViewDoctorSpecialist(
-            myList: secialestList ?? [],
-          ),
-          verticalSpace(7),
-          ListViewDoctor(
-            myList: doctorLists ?? [],
-          ),
-        ],
-      ),
+    return ListViewSpecialist(
+      myList: secialestList ?? [],
     );
   }
 }

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:development/core/di/dependency_injection.dart';
 import 'package:development/core/helpers/cache_helper.dart';
 import 'package:development/core/helpers/constants.dart';
@@ -21,7 +23,10 @@ void main() async {
 }
 
 checkingLoginUser() async {
-  String? token = await CacheHelper.getString(SharredKeys.userToken);
+  String? token =
+      await CacheHelper.getSecuredString(key: SharredKeys.userToken);
+  log(token.toString());
+  log('the toke is ${SharredKeys.userToken}');
   if (!token.isNullorEmpty()) {
     isLogin = true;
   } else {

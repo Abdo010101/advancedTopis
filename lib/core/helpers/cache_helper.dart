@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -71,6 +72,26 @@ class CacheHelper {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     return sharedPreferences.getString(key) ?? '';
   }
+
+  //************ THIS  SECTION FOR SECURE DATA IN SECURE STORAGE ******************************  */
+  /// secure string in secure storage with value
+  static setSecuredString({required String key, required String value}) async {
+    final storage = new FlutterSecureStorage();
+    debugPrint('FlutterSecureStorage : saved String $key with value $value');
+    return await storage.write(key: key, value: value);
+  }
+
+  /// get secure String with key
+  static getSecuredString({required String key}) async {
+    final storage = new FlutterSecureStorage();
+    debugPrint('FlutterSecureStorage : get Secured String $key ');
+    return await storage.read(
+          key: key,
+        ) ??
+        '';
+  }
+
+  //**************************************************************************************** */
 
   static const String _keyData = 'myData';
   static const String _keyExpiration = 'exipartionTime';

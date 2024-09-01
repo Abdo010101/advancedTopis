@@ -20,8 +20,8 @@ void main() async {
 }
 
 checkingLoginUser() async {
-  var userToken = await CacheHelper.getString(SharredKeys.userToken);
-  if (!userToken.isNullorEmpty()) {
+  var token = await CacheHelper.getSecuredString(key: SharredKeys.userToken);
+  if (!token.isNullorEmpty()) {
     isLogin = true;
   } else {
     isLogin = false;

@@ -6,7 +6,8 @@ import 'package:development/features/home/logic/cubit/home_state.dart';
 import 'package:development/features/home/ui/widgets/custom_text_specialist.dart';
 import 'package:development/features/home/ui/widgets/doctor_blue_container.dart';
 import 'package:development/features/home/ui/widgets/list_view_doctor.dart';
-import 'package:development/features/home/ui/widgets/list_view_doctor_specialist.dart';
+import 'package:development/features/home/ui/widgets/list_view_specialist.dart';
+import 'package:development/features/home/ui/widgets/setup_blocBuilder_doctor_list.dart';
 import 'package:development/features/home/ui/widgets/setup_blocBuilder_specialest_doctor.dart';
 import 'package:development/features/home/ui/widgets/top_app_bar.dart';
 
@@ -36,8 +37,8 @@ class HomeScreen extends StatelessWidget {
               verticalSpace(10),
               const CustomTextSpecialist(),
               verticalSpace(5),
-              const SetupBlocbuilderSpecialestDoctor(),
-              
+              const SetupBlocbuilderSpecialest(),
+              const SetupBlocbuilderDoctorList(),
             ],
           ),
         ),

@@ -4,6 +4,8 @@ import 'package:development/core/helpers/cache_helper.dart';
 import 'package:development/core/helpers/constants.dart';
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:path_provider/path_provider.dart' as path_provider;
+import 'package:dio_cache_interceptor/dio_cache_interceptor.dart';
 
 class DioFactory {
   // if we put ///  3 slash this mean docment comment
@@ -23,6 +25,7 @@ class DioFactory {
         ..options.receiveTimeout = timeOut;
       addDioHeaders();
       addDioInterceptor();
+     
       return dio!;
     } else {
       return dio!;
@@ -39,12 +42,28 @@ class DioFactory {
     );
   }
 
+   
+///** File-Based Storage: FileCacheStore stores the cached data in the device's file system. This approach is useful for persisting data across app launches because the data remains 
+//** saved in the device's storage until explicitly cleared or when the cache expires.
+
+  //** add Caching Method.*** */
+  // static Future<void> addDioCaching() async {
+  //   final cacheDir = await path_provider.getTemporaryDirectory();
+  //   final cacheStore = FileCacheStore(cacheDir.path);
+  //   final options = CacheOptions(
+  //     store: cacheStore,
+  //     policy: CachePolicy.request,
+  //     hitCacheOnErrorExcept: [401, 403],
+  //     priority: CachePriority.normal,
+  //     maxStale: const Duration(days: 7),
+  //   );
+
   static void addDioHeaders() async {
     // this not allwed to save token as we doing
     dio?.options.headers = {
       HttpHeaders.acceptHeader: "application/json",
       HttpHeaders.authorizationHeader:
-          'Bearer ${await CacheHelper.getString(SharredKeys.userToken)}',
+          'Bearer ${await CacheHelper.getSecuredString(key: SharredKeys.userToken)}',
       // HttpHeaders.contentTypeHeader :"application/json"
     };
   }

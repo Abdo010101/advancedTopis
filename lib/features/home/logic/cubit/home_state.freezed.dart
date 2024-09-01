@@ -23,6 +23,8 @@ mixin _$HomeState {
     required TResult Function(SpecialestResponse specialestResponse)
         getAllDoctorSpecilestSuccess,
     required TResult Function(String error) getAllDoctorSpecilestError,
+    required TResult Function(List<Doctor?>? doctors) doctorSucess,
+    required TResult Function(ErrorHandler errorHandler) doctorError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +34,8 @@ mixin _$HomeState {
     TResult? Function(SpecialestResponse specialestResponse)?
         getAllDoctorSpecilestSuccess,
     TResult? Function(String error)? getAllDoctorSpecilestError,
+    TResult? Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult? Function(ErrorHandler errorHandler)? doctorError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +45,8 @@ mixin _$HomeState {
     TResult Function(SpecialestResponse specialestResponse)?
         getAllDoctorSpecilestSuccess,
     TResult Function(String error)? getAllDoctorSpecilestError,
+    TResult Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult Function(ErrorHandler errorHandler)? doctorError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -53,6 +59,8 @@ mixin _$HomeState {
         getAllDoctorSpecilestSuccess,
     required TResult Function(GetAllDoctorSpecilestError value)
         getAllDoctorSpecilestError,
+    required TResult Function(DoctorSuccess value) doctorSucess,
+    required TResult Function(DoctorError value) doctorError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,6 +72,8 @@ mixin _$HomeState {
         getAllDoctorSpecilestSuccess,
     TResult? Function(GetAllDoctorSpecilestError value)?
         getAllDoctorSpecilestError,
+    TResult? Function(DoctorSuccess value)? doctorSucess,
+    TResult? Function(DoctorError value)? doctorError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,6 +85,8 @@ mixin _$HomeState {
         getAllDoctorSpecilestSuccess,
     TResult Function(GetAllDoctorSpecilestError value)?
         getAllDoctorSpecilestError,
+    TResult Function(DoctorSuccess value)? doctorSucess,
+    TResult Function(DoctorError value)? doctorError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -140,6 +152,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(SpecialestResponse specialestResponse)
         getAllDoctorSpecilestSuccess,
     required TResult Function(String error) getAllDoctorSpecilestError,
+    required TResult Function(List<Doctor?>? doctors) doctorSucess,
+    required TResult Function(ErrorHandler errorHandler) doctorError,
   }) {
     return initial();
   }
@@ -152,6 +166,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(SpecialestResponse specialestResponse)?
         getAllDoctorSpecilestSuccess,
     TResult? Function(String error)? getAllDoctorSpecilestError,
+    TResult? Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult? Function(ErrorHandler errorHandler)? doctorError,
   }) {
     return initial?.call();
   }
@@ -164,6 +180,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(SpecialestResponse specialestResponse)?
         getAllDoctorSpecilestSuccess,
     TResult Function(String error)? getAllDoctorSpecilestError,
+    TResult Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult Function(ErrorHandler errorHandler)? doctorError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -182,6 +200,8 @@ class _$InitialImpl implements _Initial {
         getAllDoctorSpecilestSuccess,
     required TResult Function(GetAllDoctorSpecilestError value)
         getAllDoctorSpecilestError,
+    required TResult Function(DoctorSuccess value) doctorSucess,
+    required TResult Function(DoctorError value) doctorError,
   }) {
     return initial(this);
   }
@@ -196,6 +216,8 @@ class _$InitialImpl implements _Initial {
         getAllDoctorSpecilestSuccess,
     TResult? Function(GetAllDoctorSpecilestError value)?
         getAllDoctorSpecilestError,
+    TResult? Function(DoctorSuccess value)? doctorSucess,
+    TResult? Function(DoctorError value)? doctorError,
   }) {
     return initial?.call(this);
   }
@@ -210,6 +232,8 @@ class _$InitialImpl implements _Initial {
         getAllDoctorSpecilestSuccess,
     TResult Function(GetAllDoctorSpecilestError value)?
         getAllDoctorSpecilestError,
+    TResult Function(DoctorSuccess value)? doctorSucess,
+    TResult Function(DoctorError value)? doctorError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -270,6 +294,8 @@ class _$GetAllDoctorSpecilestLoadingImpl
     required TResult Function(SpecialestResponse specialestResponse)
         getAllDoctorSpecilestSuccess,
     required TResult Function(String error) getAllDoctorSpecilestError,
+    required TResult Function(List<Doctor?>? doctors) doctorSucess,
+    required TResult Function(ErrorHandler errorHandler) doctorError,
   }) {
     return getAllDoctorSpecilestLoading();
   }
@@ -282,6 +308,8 @@ class _$GetAllDoctorSpecilestLoadingImpl
     TResult? Function(SpecialestResponse specialestResponse)?
         getAllDoctorSpecilestSuccess,
     TResult? Function(String error)? getAllDoctorSpecilestError,
+    TResult? Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult? Function(ErrorHandler errorHandler)? doctorError,
   }) {
     return getAllDoctorSpecilestLoading?.call();
   }
@@ -294,6 +322,8 @@ class _$GetAllDoctorSpecilestLoadingImpl
     TResult Function(SpecialestResponse specialestResponse)?
         getAllDoctorSpecilestSuccess,
     TResult Function(String error)? getAllDoctorSpecilestError,
+    TResult Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult Function(ErrorHandler errorHandler)? doctorError,
     required TResult orElse(),
   }) {
     if (getAllDoctorSpecilestLoading != null) {
@@ -312,6 +342,8 @@ class _$GetAllDoctorSpecilestLoadingImpl
         getAllDoctorSpecilestSuccess,
     required TResult Function(GetAllDoctorSpecilestError value)
         getAllDoctorSpecilestError,
+    required TResult Function(DoctorSuccess value) doctorSucess,
+    required TResult Function(DoctorError value) doctorError,
   }) {
     return getAllDoctorSpecilestLoading(this);
   }
@@ -326,6 +358,8 @@ class _$GetAllDoctorSpecilestLoadingImpl
         getAllDoctorSpecilestSuccess,
     TResult? Function(GetAllDoctorSpecilestError value)?
         getAllDoctorSpecilestError,
+    TResult? Function(DoctorSuccess value)? doctorSucess,
+    TResult? Function(DoctorError value)? doctorError,
   }) {
     return getAllDoctorSpecilestLoading?.call(this);
   }
@@ -340,6 +374,8 @@ class _$GetAllDoctorSpecilestLoadingImpl
         getAllDoctorSpecilestSuccess,
     TResult Function(GetAllDoctorSpecilestError value)?
         getAllDoctorSpecilestError,
+    TResult Function(DoctorSuccess value)? doctorSucess,
+    TResult Function(DoctorError value)? doctorError,
     required TResult orElse(),
   }) {
     if (getAllDoctorSpecilestLoading != null) {
@@ -429,6 +465,8 @@ class _$GetAllDoctorSpecilestSuccessImpl
     required TResult Function(SpecialestResponse specialestResponse)
         getAllDoctorSpecilestSuccess,
     required TResult Function(String error) getAllDoctorSpecilestError,
+    required TResult Function(List<Doctor?>? doctors) doctorSucess,
+    required TResult Function(ErrorHandler errorHandler) doctorError,
   }) {
     return getAllDoctorSpecilestSuccess(specialestResponse);
   }
@@ -441,6 +479,8 @@ class _$GetAllDoctorSpecilestSuccessImpl
     TResult? Function(SpecialestResponse specialestResponse)?
         getAllDoctorSpecilestSuccess,
     TResult? Function(String error)? getAllDoctorSpecilestError,
+    TResult? Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult? Function(ErrorHandler errorHandler)? doctorError,
   }) {
     return getAllDoctorSpecilestSuccess?.call(specialestResponse);
   }
@@ -453,6 +493,8 @@ class _$GetAllDoctorSpecilestSuccessImpl
     TResult Function(SpecialestResponse specialestResponse)?
         getAllDoctorSpecilestSuccess,
     TResult Function(String error)? getAllDoctorSpecilestError,
+    TResult Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult Function(ErrorHandler errorHandler)? doctorError,
     required TResult orElse(),
   }) {
     if (getAllDoctorSpecilestSuccess != null) {
@@ -471,6 +513,8 @@ class _$GetAllDoctorSpecilestSuccessImpl
         getAllDoctorSpecilestSuccess,
     required TResult Function(GetAllDoctorSpecilestError value)
         getAllDoctorSpecilestError,
+    required TResult Function(DoctorSuccess value) doctorSucess,
+    required TResult Function(DoctorError value) doctorError,
   }) {
     return getAllDoctorSpecilestSuccess(this);
   }
@@ -485,6 +529,8 @@ class _$GetAllDoctorSpecilestSuccessImpl
         getAllDoctorSpecilestSuccess,
     TResult? Function(GetAllDoctorSpecilestError value)?
         getAllDoctorSpecilestError,
+    TResult? Function(DoctorSuccess value)? doctorSucess,
+    TResult? Function(DoctorError value)? doctorError,
   }) {
     return getAllDoctorSpecilestSuccess?.call(this);
   }
@@ -499,6 +545,8 @@ class _$GetAllDoctorSpecilestSuccessImpl
         getAllDoctorSpecilestSuccess,
     TResult Function(GetAllDoctorSpecilestError value)?
         getAllDoctorSpecilestError,
+    TResult Function(DoctorSuccess value)? doctorSucess,
+    TResult Function(DoctorError value)? doctorError,
     required TResult orElse(),
   }) {
     if (getAllDoctorSpecilestSuccess != null) {
@@ -592,6 +640,8 @@ class _$GetAllDoctorSpecilestErrorImpl implements GetAllDoctorSpecilestError {
     required TResult Function(SpecialestResponse specialestResponse)
         getAllDoctorSpecilestSuccess,
     required TResult Function(String error) getAllDoctorSpecilestError,
+    required TResult Function(List<Doctor?>? doctors) doctorSucess,
+    required TResult Function(ErrorHandler errorHandler) doctorError,
   }) {
     return getAllDoctorSpecilestError(error);
   }
@@ -604,6 +654,8 @@ class _$GetAllDoctorSpecilestErrorImpl implements GetAllDoctorSpecilestError {
     TResult? Function(SpecialestResponse specialestResponse)?
         getAllDoctorSpecilestSuccess,
     TResult? Function(String error)? getAllDoctorSpecilestError,
+    TResult? Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult? Function(ErrorHandler errorHandler)? doctorError,
   }) {
     return getAllDoctorSpecilestError?.call(error);
   }
@@ -616,6 +668,8 @@ class _$GetAllDoctorSpecilestErrorImpl implements GetAllDoctorSpecilestError {
     TResult Function(SpecialestResponse specialestResponse)?
         getAllDoctorSpecilestSuccess,
     TResult Function(String error)? getAllDoctorSpecilestError,
+    TResult Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult Function(ErrorHandler errorHandler)? doctorError,
     required TResult orElse(),
   }) {
     if (getAllDoctorSpecilestError != null) {
@@ -634,6 +688,8 @@ class _$GetAllDoctorSpecilestErrorImpl implements GetAllDoctorSpecilestError {
         getAllDoctorSpecilestSuccess,
     required TResult Function(GetAllDoctorSpecilestError value)
         getAllDoctorSpecilestError,
+    required TResult Function(DoctorSuccess value) doctorSucess,
+    required TResult Function(DoctorError value) doctorError,
   }) {
     return getAllDoctorSpecilestError(this);
   }
@@ -648,6 +704,8 @@ class _$GetAllDoctorSpecilestErrorImpl implements GetAllDoctorSpecilestError {
         getAllDoctorSpecilestSuccess,
     TResult? Function(GetAllDoctorSpecilestError value)?
         getAllDoctorSpecilestError,
+    TResult? Function(DoctorSuccess value)? doctorSucess,
+    TResult? Function(DoctorError value)? doctorError,
   }) {
     return getAllDoctorSpecilestError?.call(this);
   }
@@ -662,6 +720,8 @@ class _$GetAllDoctorSpecilestErrorImpl implements GetAllDoctorSpecilestError {
         getAllDoctorSpecilestSuccess,
     TResult Function(GetAllDoctorSpecilestError value)?
         getAllDoctorSpecilestError,
+    TResult Function(DoctorSuccess value)? doctorSucess,
+    TResult Function(DoctorError value)? doctorError,
     required TResult orElse(),
   }) {
     if (getAllDoctorSpecilestError != null) {
@@ -679,4 +739,354 @@ abstract class GetAllDoctorSpecilestError implements HomeState {
   @JsonKey(ignore: true)
   _$$GetAllDoctorSpecilestErrorImplCopyWith<_$GetAllDoctorSpecilestErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DoctorSuccessImplCopyWith<$Res> {
+  factory _$$DoctorSuccessImplCopyWith(
+          _$DoctorSuccessImpl value, $Res Function(_$DoctorSuccessImpl) then) =
+      __$$DoctorSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Doctor?>? doctors});
+}
+
+/// @nodoc
+class __$$DoctorSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$DoctorSuccessImpl>
+    implements _$$DoctorSuccessImplCopyWith<$Res> {
+  __$$DoctorSuccessImplCopyWithImpl(
+      _$DoctorSuccessImpl _value, $Res Function(_$DoctorSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? doctors = freezed,
+  }) {
+    return _then(_$DoctorSuccessImpl(
+      doctors: freezed == doctors
+          ? _value._doctors
+          : doctors // ignore: cast_nullable_to_non_nullable
+              as List<Doctor?>?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DoctorSuccessImpl implements DoctorSuccess {
+  const _$DoctorSuccessImpl({required final List<Doctor?>? doctors})
+      : _doctors = doctors;
+
+  final List<Doctor?>? _doctors;
+  @override
+  List<Doctor?>? get doctors {
+    final value = _doctors;
+    if (value == null) return null;
+    if (_doctors is EqualUnmodifiableListView) return _doctors;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'HomeState.doctorSucess(doctors: $doctors)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DoctorSuccessImpl &&
+            const DeepCollectionEquality().equals(other._doctors, _doctors));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_doctors));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DoctorSuccessImplCopyWith<_$DoctorSuccessImpl> get copyWith =>
+      __$$DoctorSuccessImplCopyWithImpl<_$DoctorSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getAllDoctorSpecilestLoading,
+    required TResult Function(SpecialestResponse specialestResponse)
+        getAllDoctorSpecilestSuccess,
+    required TResult Function(String error) getAllDoctorSpecilestError,
+    required TResult Function(List<Doctor?>? doctors) doctorSucess,
+    required TResult Function(ErrorHandler errorHandler) doctorError,
+  }) {
+    return doctorSucess(doctors);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getAllDoctorSpecilestLoading,
+    TResult? Function(SpecialestResponse specialestResponse)?
+        getAllDoctorSpecilestSuccess,
+    TResult? Function(String error)? getAllDoctorSpecilestError,
+    TResult? Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult? Function(ErrorHandler errorHandler)? doctorError,
+  }) {
+    return doctorSucess?.call(doctors);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getAllDoctorSpecilestLoading,
+    TResult Function(SpecialestResponse specialestResponse)?
+        getAllDoctorSpecilestSuccess,
+    TResult Function(String error)? getAllDoctorSpecilestError,
+    TResult Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult Function(ErrorHandler errorHandler)? doctorError,
+    required TResult orElse(),
+  }) {
+    if (doctorSucess != null) {
+      return doctorSucess(doctors);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetAllDoctorSpecilestLoading value)
+        getAllDoctorSpecilestLoading,
+    required TResult Function(GetAllDoctorSpecilestSuccess value)
+        getAllDoctorSpecilestSuccess,
+    required TResult Function(GetAllDoctorSpecilestError value)
+        getAllDoctorSpecilestError,
+    required TResult Function(DoctorSuccess value) doctorSucess,
+    required TResult Function(DoctorError value) doctorError,
+  }) {
+    return doctorSucess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetAllDoctorSpecilestLoading value)?
+        getAllDoctorSpecilestLoading,
+    TResult? Function(GetAllDoctorSpecilestSuccess value)?
+        getAllDoctorSpecilestSuccess,
+    TResult? Function(GetAllDoctorSpecilestError value)?
+        getAllDoctorSpecilestError,
+    TResult? Function(DoctorSuccess value)? doctorSucess,
+    TResult? Function(DoctorError value)? doctorError,
+  }) {
+    return doctorSucess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetAllDoctorSpecilestLoading value)?
+        getAllDoctorSpecilestLoading,
+    TResult Function(GetAllDoctorSpecilestSuccess value)?
+        getAllDoctorSpecilestSuccess,
+    TResult Function(GetAllDoctorSpecilestError value)?
+        getAllDoctorSpecilestError,
+    TResult Function(DoctorSuccess value)? doctorSucess,
+    TResult Function(DoctorError value)? doctorError,
+    required TResult orElse(),
+  }) {
+    if (doctorSucess != null) {
+      return doctorSucess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DoctorSuccess implements HomeState {
+  const factory DoctorSuccess({required final List<Doctor?>? doctors}) =
+      _$DoctorSuccessImpl;
+
+  List<Doctor?>? get doctors;
+  @JsonKey(ignore: true)
+  _$$DoctorSuccessImplCopyWith<_$DoctorSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DoctorErrorImplCopyWith<$Res> {
+  factory _$$DoctorErrorImplCopyWith(
+          _$DoctorErrorImpl value, $Res Function(_$DoctorErrorImpl) then) =
+      __$$DoctorErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ErrorHandler errorHandler});
+}
+
+/// @nodoc
+class __$$DoctorErrorImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$DoctorErrorImpl>
+    implements _$$DoctorErrorImplCopyWith<$Res> {
+  __$$DoctorErrorImplCopyWithImpl(
+      _$DoctorErrorImpl _value, $Res Function(_$DoctorErrorImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorHandler = null,
+  }) {
+    return _then(_$DoctorErrorImpl(
+      null == errorHandler
+          ? _value.errorHandler
+          : errorHandler // ignore: cast_nullable_to_non_nullable
+              as ErrorHandler,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DoctorErrorImpl implements DoctorError {
+  const _$DoctorErrorImpl(this.errorHandler);
+
+  @override
+  final ErrorHandler errorHandler;
+
+  @override
+  String toString() {
+    return 'HomeState.doctorError(errorHandler: $errorHandler)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DoctorErrorImpl &&
+            (identical(other.errorHandler, errorHandler) ||
+                other.errorHandler == errorHandler));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorHandler);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DoctorErrorImplCopyWith<_$DoctorErrorImpl> get copyWith =>
+      __$$DoctorErrorImplCopyWithImpl<_$DoctorErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getAllDoctorSpecilestLoading,
+    required TResult Function(SpecialestResponse specialestResponse)
+        getAllDoctorSpecilestSuccess,
+    required TResult Function(String error) getAllDoctorSpecilestError,
+    required TResult Function(List<Doctor?>? doctors) doctorSucess,
+    required TResult Function(ErrorHandler errorHandler) doctorError,
+  }) {
+    return doctorError(errorHandler);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getAllDoctorSpecilestLoading,
+    TResult? Function(SpecialestResponse specialestResponse)?
+        getAllDoctorSpecilestSuccess,
+    TResult? Function(String error)? getAllDoctorSpecilestError,
+    TResult? Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult? Function(ErrorHandler errorHandler)? doctorError,
+  }) {
+    return doctorError?.call(errorHandler);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getAllDoctorSpecilestLoading,
+    TResult Function(SpecialestResponse specialestResponse)?
+        getAllDoctorSpecilestSuccess,
+    TResult Function(String error)? getAllDoctorSpecilestError,
+    TResult Function(List<Doctor?>? doctors)? doctorSucess,
+    TResult Function(ErrorHandler errorHandler)? doctorError,
+    required TResult orElse(),
+  }) {
+    if (doctorError != null) {
+      return doctorError(errorHandler);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetAllDoctorSpecilestLoading value)
+        getAllDoctorSpecilestLoading,
+    required TResult Function(GetAllDoctorSpecilestSuccess value)
+        getAllDoctorSpecilestSuccess,
+    required TResult Function(GetAllDoctorSpecilestError value)
+        getAllDoctorSpecilestError,
+    required TResult Function(DoctorSuccess value) doctorSucess,
+    required TResult Function(DoctorError value) doctorError,
+  }) {
+    return doctorError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetAllDoctorSpecilestLoading value)?
+        getAllDoctorSpecilestLoading,
+    TResult? Function(GetAllDoctorSpecilestSuccess value)?
+        getAllDoctorSpecilestSuccess,
+    TResult? Function(GetAllDoctorSpecilestError value)?
+        getAllDoctorSpecilestError,
+    TResult? Function(DoctorSuccess value)? doctorSucess,
+    TResult? Function(DoctorError value)? doctorError,
+  }) {
+    return doctorError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetAllDoctorSpecilestLoading value)?
+        getAllDoctorSpecilestLoading,
+    TResult Function(GetAllDoctorSpecilestSuccess value)?
+        getAllDoctorSpecilestSuccess,
+    TResult Function(GetAllDoctorSpecilestError value)?
+        getAllDoctorSpecilestError,
+    TResult Function(DoctorSuccess value)? doctorSucess,
+    TResult Function(DoctorError value)? doctorError,
+    required TResult orElse(),
+  }) {
+    if (doctorError != null) {
+      return doctorError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DoctorError implements HomeState {
+  const factory DoctorError(final ErrorHandler errorHandler) =
+      _$DoctorErrorImpl;
+
+  ErrorHandler get errorHandler;
+  @JsonKey(ignore: true)
+  _$$DoctorErrorImplCopyWith<_$DoctorErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

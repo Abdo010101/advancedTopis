@@ -38,6 +38,12 @@ class LoginCubit extends Cubit<LoginState> {
 
     response.when(success: (loginRespone) async {
       await savedToken(token: loginRespone.data?.token ?? "");
+
+      /// there is a problem herer
+      String val =
+          await CacheHelper.getSecuredString(key: SharredKeys.userToken);
+      // log(val.toString());
+      log("new token atfter login ${SharredKeys.userToken.toString()}");
       emit(LoginState.success(loginRespone));
     }, failure: (error) {
       if (error.apiErrorModel.data == null) {
@@ -52,7 +58,7 @@ class LoginCubit extends Cubit<LoginState> {
 }
 
 Future<void> savedToken({required String token}) async {
-  await CacheHelper.setData(key: SharredKeys.userToken, value: token);
+  await CacheHelper.setSecuredString(key: SharredKeys.userToken, value: token);
   // after we have token we must aupdate the dio with new token
   DioFactory.setTokenIntoHeaderAfterLogin(token);
 }

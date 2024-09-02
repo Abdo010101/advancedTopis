@@ -5,10 +5,10 @@ import 'package:development/features/home/logic/cubit/home_cubit.dart';
 import 'package:development/features/home/logic/cubit/home_state.dart';
 import 'package:development/features/home/ui/widgets/custom_text_specialist.dart';
 import 'package:development/features/home/ui/widgets/doctor_blue_container.dart';
-import 'package:development/features/home/ui/widgets/list_view_doctor.dart';
-import 'package:development/features/home/ui/widgets/list_view_specialist.dart';
-import 'package:development/features/home/ui/widgets/setup_blocBuilder_doctor_list.dart';
-import 'package:development/features/home/ui/widgets/setup_blocBuilder_specialest_doctor.dart';
+import 'package:development/features/home/ui/widgets/doctor_list/list_view_doctor.dart';
+import 'package:development/features/home/ui/widgets/specialization_doctor/list_view_specialist.dart';
+import 'package:development/features/home/ui/widgets/doctor_list/setup_blocBuilder_doctor_list.dart';
+import 'package:development/features/home/ui/widgets/specialization_doctor/setup_blocBuilder_specialest_doctor.dart';
 import 'package:development/features/home/ui/widgets/top_app_bar.dart';
 
 import 'package:flutter/material.dart';

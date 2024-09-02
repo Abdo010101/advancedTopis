@@ -2,8 +2,8 @@ import 'package:development/core/helpers/spacing.dart';
 import 'package:development/features/home/data/models/specialest_doctor_model/doctor.dart';
 import 'package:development/features/home/logic/cubit/home_cubit.dart';
 import 'package:development/features/home/logic/cubit/home_state.dart';
-import 'package:development/features/home/ui/widgets/list_view_doctor.dart';
-import 'package:development/features/home/ui/widgets/setup_blocBuilder_specialest_doctor.dart';
+import 'package:development/features/home/ui/widgets/doctor_list/list_view_doctor.dart';
+import 'package:development/features/home/ui/widgets/specialization_doctor/setup_blocBuilder_specialest_doctor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -35,7 +35,7 @@ class SetupErrorDoctor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(child: Text('No Doctor Found'));
+    return SizedBox.shrink();
   }
 }
 

@@ -65,6 +65,8 @@ dependencies:
   #Dio HTTP cache interceptor with multiple stores respecting HTTP directives (or not).
   dio_cache_interceptor: ^3.5.0
   path_provider: ^2.1.4
+  #vA package provides an easy way to add shimmer effect in Flutter project
+  shimmer: ^3.0.0
 
 
 

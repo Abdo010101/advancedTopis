@@ -1,7 +1,7 @@
 import 'package:development/core/helpers/spacing.dart';
 import 'package:development/core/theming/style.dart';
 import 'package:development/features/home/data/models/specialest_doctor_model/doctor.dart';
-import 'package:development/features/home/ui/widgets/list_view_doctor_item.dart';
+import 'package:development/features/home/ui/widgets/doctor_list/list_view_doctor_item.dart';
 import 'package:development/features/login/ui/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

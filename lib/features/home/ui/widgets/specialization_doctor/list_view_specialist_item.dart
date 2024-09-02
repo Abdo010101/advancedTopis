@@ -25,7 +25,7 @@ class ListViewSpecialistItem extends StatelessWidget {
           selectedIndex == index
               ? Container(
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.green),
+                    border: Border.all(color: Colors.green, width: 1.6),
                     shape: BoxShape.circle,
                   ),
                   child: CircleAvatar(

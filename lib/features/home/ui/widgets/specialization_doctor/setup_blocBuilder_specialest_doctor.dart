@@ -1,10 +1,10 @@
 import 'package:development/core/helpers/spacing.dart';
-import 'package:development/features/home/data/models/specialest_doctor_model/doctor.dart';
 import 'package:development/features/home/data/models/specialest_doctor_model/specialest_doctor_model.dart';
 import 'package:development/features/home/logic/cubit/home_cubit.dart';
 import 'package:development/features/home/logic/cubit/home_state.dart';
-import 'package:development/features/home/ui/widgets/list_view_doctor.dart';
-import 'package:development/features/home/ui/widgets/list_view_specialist.dart';
+import 'package:development/features/home/ui/widgets/doctor_list/doctors_shimmer_loading.dart';
+import 'package:development/features/home/ui/widgets/specialization_doctor/list_view_specialist.dart';
+import 'package:development/features/home/ui/widgets/specialization_doctor/specialzation_shimmer_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -60,6 +60,12 @@ class SetupError extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(child: Center(child: CircularProgressIndicator()));
+    return Expanded(
+      child: Column(children: [
+        const SpecialityShimmerLoading(),
+        verticalSpace(14),
+        const DoctorsShimmerLoading(),
+      ]),
+    );
   }
 }

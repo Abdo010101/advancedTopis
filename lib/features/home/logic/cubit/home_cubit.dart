@@ -15,6 +15,7 @@ class HomeCubit extends Cubit<HomeState> {
   /// this list have all specialzatoins  with all doctor in the each specialzation field
   List<SpecialestDoctorModel?>? sepcialestDoctorList = [];
 
+
   void getAllSpecialestDoctors() async {
     emit(const HomeState.getAllDoctorSpecilestLoading());
 
@@ -51,4 +52,7 @@ class HomeCubit extends Cubit<HomeState> {
             ?.doctors ??
         [];
   }
+
+
+
 }

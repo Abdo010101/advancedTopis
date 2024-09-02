@@ -1,6 +1,6 @@
 import 'package:development/features/home/data/models/specialest_doctor_model/specialest_doctor_model.dart';
 import 'package:development/features/home/logic/cubit/home_cubit.dart';
-import 'package:development/features/home/ui/widgets/list_view_specialist_item.dart';
+import 'package:development/features/home/ui/widgets/specialization_doctor/list_view_specialist_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
